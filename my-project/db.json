@@ -1,0 +1,19 @@
+{
+  "friends": [
+    {
+      "id": 1,
+      "name": "Riya Tiwari",
+      "profession": "Frontend Developer"
+    },
+    {
+      "id": 2,
+      "name": "Mayur Tiwari",
+      "alterEgo": "Backend Developer"
+    },
+    {
+      "id": 3,
+      "name": "Bharat Chavhan",
+      "alterEgo": "Full Stack Developer"
+    }
+  ]
+}
