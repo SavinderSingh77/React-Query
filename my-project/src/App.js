@@ -4,13 +4,17 @@ import Header from "./Components/Header";
 import Home from "./Components/Home";
 import RQFriends from "./Components/RQFriends";
 import { createBrowserRouter, Outlet } from "react-router-dom";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
+const queryClient = new QueryClient();
 function App() {
   return (
-    <>
-      <Header />
-      <Outlet />
-    </>
+    <QueryClientProvider client={queryClient}>
+      <>
+        <Header />
+        <Outlet />
+      </>
+    </QueryClientProvider>
   );
 }
 
