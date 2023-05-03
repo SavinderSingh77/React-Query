@@ -20,3 +20,6 @@ React Query can handle all of this very easily. So let's explore React Query ðŸ¥
 3. Creating db.json file
 4. Creating 3 different routes using React-Router-DOM
 5. Fetching data traditional way in Friends Component.
+
+<br>
+By default, every query result that we get from the useQuery hook is cached for 5 minutes, and React Query relies on this cached result for subsequent requests. Therefore, the first time we visit the RQFriends page, isLoading will become true, and we will see the Loading text. However, for the rest of the time, we visit the page, we won't see the Loading text because isLoading will remain false. Nonetheless, React Query understands that the API data might have changed, so it will run a background fetch. If the data has changed, it will replace the cached data. To check whether this background fetching is occurring, we have the isFetching flag in the useQuery Hook. We can also change the cached time by passing a third argument in the useQuery hook, and after the cache time, the cached result will be garbage collected, and we will see isLoading true again when we visit the page.

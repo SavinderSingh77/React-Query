@@ -4,7 +4,8 @@ import Header from "./Components/Header";
 import Home from "./Components/Home";
 import RQFriends from "./Components/RQFriends";
 import { createBrowserRouter, Outlet } from "react-router-dom";
-import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import { QueryClientProvider, QueryClient, } from "@tanstack/react-query";
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
 const queryClient = new QueryClient();
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Header />
         <Outlet />
       </>
+      <ReactQueryDevtools initialIsOpen={false} position = "bottom-right"  />
     </QueryClientProvider>
   );
 }
