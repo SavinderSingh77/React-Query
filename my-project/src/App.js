@@ -4,8 +4,9 @@ import Header from "./Components/Header";
 import Home from "./Components/Home";
 import RQFriends from "./Components/RQFriends";
 import { createBrowserRouter, Outlet } from "react-router-dom";
-import { QueryClientProvider, QueryClient, } from "@tanstack/react-query";
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import { QueryClientProvider, QueryClient, } from "react-query";
+import { ReactQueryDevtools } from 'react-query/devtools'
+
 
 const queryClient = new QueryClient();
 function App() {
